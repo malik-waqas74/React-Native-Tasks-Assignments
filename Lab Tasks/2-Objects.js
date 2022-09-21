@@ -72,35 +72,24 @@ let Generator = (...args) => {
     let Even = [];
     let Odd = [];
 
-    // Function for returning Even Numbers
-    let Evener = (num) => {
-        return num % 2 == 0;
+    // Filtering and Mapping 
 
-    }
+    // deviding Even Numbers by 2
+    array.map((number) => {
+        if (number % 2 == 0) { Even.push(number / 2); }
+    });
 
-    //Function for returning Odd Numbers
-    let Odder = (num) => {
-        return num % 2 != 0;
-    }
-
-    // Applying filter functions on the Arrays
-    Even = array.filter(Evener);
-    Odd = array.filter(Odder);
+    // Multiply Odd Numbers with 2
+    array.map((number) => {
+        if (number % 2 != 0) {
+            Odd.push(number * 2);
+        }
+    })
 
 
-    // Function for devide Even Number by 2
-    let evenMapper = (num) => { return num / 2 };
-    // Mapping the Function with Array
-    Even = Even.map(evenMapper);
-
-    // Function for multiply Odd Number with 2
-    let oddMapper = (num) => { return num * 2 };
-
-    // Mapping the function with Array
-    Odd = Odd.map(oddMapper);
 
     // Returing Object
-    return { ODD: [Odd], EVEN: [Even] };
+    return { ODD: Odd, EVEN: Even };
 }
 // Calling the function
 console.log(Generator());
