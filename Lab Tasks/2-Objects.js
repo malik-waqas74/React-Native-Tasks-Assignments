@@ -73,22 +73,17 @@ let Generator = (...args) => {
     let Odd = [];
 
     // Filtering and Mapping 
-
-    // deviding Even Numbers by 2
+    
     array.map((number) => {
+       // deviding Even Numbers by 2
         if (number % 2 == 0) { Even.push(number / 2); }
+
+        // Multiply Odd Numbers with 2
+         else{
+             Odd.push(number * 2);}
     });
 
-    // Multiply Odd Numbers with 2
-    array.map((number) => {
-        if (number % 2 != 0) {
-            Odd.push(number * 2);
-        }
-    })
-
-
-
-    // Returing Object
+     // Returing Object
     return { ODD: Odd, EVEN: Even };
 }
 // Calling the function
