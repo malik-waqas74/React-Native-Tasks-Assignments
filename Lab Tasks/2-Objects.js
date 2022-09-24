@@ -87,4 +87,4 @@ let Generator = (...args) => {
     return { ODD: Odd, EVEN: Even };
 }
 // Calling the function
-console.log(Generator());
+console.log(Generator());   
